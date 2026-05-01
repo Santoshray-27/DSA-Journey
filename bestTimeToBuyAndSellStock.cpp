@@ -1,21 +1,21 @@
+// bestTimeToBuyAndSellStock
 #include <iostream>
 using namespace std;
 
 int main()
 {
     int arr[5] = {3, 2, 4, 6, 2};
-    int sub = 0;
-    int max;
-    for (int i = 0; i < 5; i++)
+    int n = 5;
+    int profit = 0;
+    for (int i = 0; i < n - 1; i++)
     {
-        for (int j = i + 1; j < 5; j++)
+        for (int j = i + 1; j < n; j++)
         {
-            sub = arr[i] - arr[j];
-            if (sub > sub)
+            if (arr[j] - arr[i] > profit)
             {
-                max = sub;
+                profit = arr[j] - arr[i];
             }
         }
     }
-    cout << max;
+    cout << profit << endl;
 }
