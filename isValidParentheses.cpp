@@ -1,5 +1,6 @@
 #include <stack>
 #include <string>
+#include <iostream>
 using namespace std;
 class Solution
 {
@@ -35,3 +36,19 @@ public:
         return st.empty();
     }
 };
+
+int main()
+{
+    Solution solution;
+    string input = "({[]})";
+    bool result = solution.isValid(input);
+    if (result)
+    {
+        cout << "The parentheses are valid." << endl;
+    }
+    else
+    {
+        cout << "The parentheses are not valid." << endl;
+    }
+    return 0;
+}
